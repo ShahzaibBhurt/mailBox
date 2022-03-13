@@ -4,9 +4,24 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Login from './components/Login';
 import Main from './components/Main';
 import SignUp from './components/Signup';
-import CronJobs from './components/CronJobs';
+import { useEffect } from 'react';
+import { gql, useMutation } from '@apollo/client';
+import moment from 'moment';
+
+const DeleteEmails = gql`mutation deleteEmails($dateTime: timestamptz!) {
+  delete_mails(where: {will_delete: {_lte: $dateTime}}) {
+    affected_rows
+  }
+}`;
 
 function App() {
+  const [deleteEmail] = useMutation(DeleteEmails);
+  useEffect(()=>{
+    setInterval(()=>{
+      var dateTime = moment().format()
+      deleteEmail({variables:{dateTime}})
+    },3600000)
+  })
   return (
     <BrowserRouter>
       <Routes>
@@ -21,7 +36,6 @@ function App() {
         <Route exact path="/haunt" element={<Main page="haunt" key="haunt"/>} />
         <Route exact path="/save" element={<Main page="save" key="save"/>} />
         <Route exact path="/read" element={<Main page="read" key="read"/>} />
-        <Route exact path="/triggers" element= {<CronJobs key="triggers"/>} />
       </Routes>
     </BrowserRouter>
   );
