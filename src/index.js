@@ -7,7 +7,7 @@ import {ws} from 'isomorphic-ws';
 
 const client = new ApolloClient({
   link: new WebSocketLink({
-    uri: "ws://mail-box.hasura.app/v1/graphql",
+    uri: "wss://mail-box.hasura.app/v1/graphql",
     webSocketImpl: ws,
     options: {
       reconnect: true,
