@@ -710,10 +710,9 @@ color: #212529;
 background-color: #f77eb9;
 }
 .mailCon{
-  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-top: 20px;
 }
 .border-lg-right{
   border-right: 5px solid gainsboro;
