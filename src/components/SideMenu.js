@@ -43,7 +43,7 @@ function SideMenu() {
         <div className="col-lg-3 email-aside border-lg-right">
             <div className="aside-content">
                 <div className="aside-header">
-                    <button className="navbar-toggle" data-target=".aside-nav" data-toggle="collapse" type="button"><span className="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokelinecape="round" strokeLinejoin="round" className="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><span className="title text-center"><b>MailBox</b></span>
+                    <button className="navbar-toggle" data-target=".aside-nav" data-toggle="collapse" type="button"><span className="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokelinecape="round" strokeLinejoin="round" className="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button><span className="title text-center"><b>Forsvinna</b></span>
                     <p className="description mt-2 text-center mb-0">{name}</p>
                 </div>
                 <div className="aside-compose">
@@ -68,35 +68,35 @@ function SideMenu() {
 							<Link to="/hover">
 								<span className="icon">
 									<i className="fa fa-briefcase mr-3"></i>
-								</span>Hover
+								</span>Sveima
 							</Link>
 						</li>
                         <li className={(pathname === '/float')?"active":""}>
 							<Link to="/float">
 								<span className="icon">
 									<i className="fa fa-briefcase mr-3"></i>
-								</span>Float
+								</span>Fljóta
 							</Link>
 						</li>
                         <li className={(pathname === '/stride')?"active":""}>
 							<Link to="/stride">
 								<span className="icon">
 									<i className="fa fa-star mr-3"></i>
-								</span>Stride
+								</span>Skref
 							</Link>
 						</li>
                         <li className={(pathname === '/disappear')?"active":""}>
 							<Link to="/disappear">
 								<span className="icon">
 									<i className="fa fa-trash mr-3"></i>
-								</span>Disappear
+								</span>Hverfa
 							</Link>
 						</li>
                         <li className={(pathname === '/haunt')?"active":""}>
 							<Link to="/haunt">
 								<span className="icon">
 									<i className="fa fa-file mr-3"></i>
-								</span>Haunt
+								</span>ásækja
 							</Link>
 						</li>
                         <li className={(pathname === '/save')?"active":""}>
