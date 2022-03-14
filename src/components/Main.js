@@ -134,11 +134,9 @@ function Main({page}) {
         }
       }
   return (
-    <div className="container mailCon">
+    <div className="container-fluid mailCon">
       <div className="row inbox-wrapper">
           <div className="col-lg-12">
-            <div className="card">
-              <div className="card-body">
                 <div className="row">
                   <SideMenu/>
                   <div className="col-lg-9 email-content">
@@ -168,8 +166,6 @@ function Main({page}) {
                   </div>
                   {/*<Message/>*/}
                 </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
